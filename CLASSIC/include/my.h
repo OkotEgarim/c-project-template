@@ -20,8 +20,8 @@ typedef struct linked_list {
 } linked_list_t;
 
 void my_putchar(char);
-int my_putnbr(long long);
-int my_putstr(char const *);
+void my_putnbr(long long);
+void my_putstr(char const *);
 int my_strlen(char const *);
 char *my_substr(char const *, int, int);
 int my_getnbr(char const *);
@@ -57,8 +57,8 @@ unsigned long long int kj_xposant(int, int);
 char *kj_atomize_char(char *, char, int, int);
 int my_list_size(linked_list_t **);
 int kj_stracmp(char const *, char const *);
-void kj_list_sort(linked_list_t **);
-int my_printf(const char *, ...);
+void my_printf(const char *, ...);
 void my_display_list(linked_list_t *, void (*)());
 void my_delete_in_list(linked_list_t **, void const *, int (*)());
+linked_list_t *kj_list_sort(linked_list_t *);
 #endif

@@ -6,7 +6,7 @@
 */
 
 #include"../../../include/my.h"
-int my_putnbr(long long number)
+void my_putnbr(long long number)
 {
     char *result = kj_int_to_str(number);
 
