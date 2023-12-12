@@ -5,7 +5,7 @@
 ** Remove all recurrence of a given character.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 char *kj_atomize_char(char *str, char c, int i, int k)
 {
     char *result;

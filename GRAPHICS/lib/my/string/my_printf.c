@@ -5,7 +5,7 @@
 ** The main part of the mini_printf function.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static void print_text(va_list list)
 {
     my_putstr(va_arg(list, char *));
@@ -61,7 +61,7 @@ static void verif_carac(char c, va_list list, int *wake_up)
     }
 }
 
-int my_printf(const char *str, ...)
+void my_printf(const char *str, ...)
 {
     va_list list;
     int wake_up = 0;

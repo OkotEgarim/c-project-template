@@ -5,7 +5,7 @@
 ** Compare a string with an other one using ASCII.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static char verif_char(char c)
 {
     if (c >= 'A' && c <= 'Z')

@@ -5,7 +5,7 @@
 ** Tranform a float number into a string.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static char *kj_subzero_to_str(char *result, int i, int virg)
 {
     char carac[] = "#";

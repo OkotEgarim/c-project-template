@@ -5,7 +5,7 @@
 ** Check if the given string contains only numbers.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 int my_str_isnum(char const *str)
 {
     for (int i = 0; str[i] != '\0'; ++i)

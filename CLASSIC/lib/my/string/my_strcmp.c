@@ -5,7 +5,7 @@
 ** Compare a string with an other one using ASCII.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 int my_strcmp(char const *s1, char const *s2)
 {
     int t1 = 0;

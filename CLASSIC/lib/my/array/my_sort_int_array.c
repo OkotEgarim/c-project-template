@@ -5,7 +5,7 @@
 ** Sort an array of integers using bubble sort.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static void my_sort_2(int *array, int j)
 {
     int tmp;

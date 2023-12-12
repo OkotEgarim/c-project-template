@@ -5,7 +5,7 @@
 ** Search a pattern into a text and return the next occurence.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 char *my_strstr(char *str, char const *to_find)
 {
     int str_a_len = my_strlen(str);

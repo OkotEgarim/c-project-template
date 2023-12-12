@@ -5,7 +5,7 @@
 ** Tranform a string into an array of words.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static int non_alphanumeric_test(char const *str)
 {
     int count = 0;

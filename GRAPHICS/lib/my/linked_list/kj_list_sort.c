@@ -2,26 +2,57 @@
 ** EPITECH PROJECT, 2023
 ** KJ_LIST_SORT
 ** File description:
-** Sort a linked list in alpha order.
+** Sort linked lists using merge sort.
 */
 
-#include"../../../include/my.h"
-void kj_list_sort(linked_list_t **files)
+#include "../../../include/my.h"
+static linked_list_t *get_middle(linked_list_t *tmp)
 {
-    linked_list_t *tmp = *files;
-    char *temp;
+    linked_list_t *slow = tmp;
+    linked_list_t *fast = tmp;
 
-    for (int mod_count = 0; mod_count > 0 ||
-    tmp->next != NULL; tmp = tmp->next){
-        if (tmp->next == NULL && mod_count > 0){
-            tmp = *files;
-            mod_count = 0;
-        }
-        if (kj_stracmp(tmp->data, tmp->next->data) > 0){
-            temp = tmp->data;
-            tmp->data = tmp->next->data;
-            tmp->next->data = temp;
-            ++mod_count;
-        }
+    if (tmp == NULL)
+        return (tmp);
+    while (fast->next != NULL && fast->next->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
     }
+    return (slow);
+}
+
+static linked_list_t *merge_node(linked_list_t *before, linked_list_t *after)
+{
+    linked_list_t *result;
+
+    if (before == NULL)
+        return (after);
+    if (after == NULL)
+        return (before);
+    if (kj_stracmp(before->data, after->data) < 0){
+        result = before;
+        result->next = merge_node(before->next, after);
+    } else {
+        result = after;
+        result->next = merge_node(before, after->next);
+    }
+    return (result);
+}
+
+linked_list_t *kj_list_sort(linked_list_t *list)
+{
+    linked_list_t *middle;
+    linked_list_t *middle_next;
+    linked_list_t *before;
+    linked_list_t *after;
+    linked_list_t *result;
+
+    if (list == NULL || list->next == NULL)
+        return (list);
+    middle = get_middle(list);
+    middle_next = middle->next;
+    middle->next = NULL;
+    before = kj_list_sort(list);
+    after = kj_list_sort(middle_next);
+    result = merge_node(before, after);
+    return (result);
 }

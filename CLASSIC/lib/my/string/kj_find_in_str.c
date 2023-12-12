@@ -5,7 +5,7 @@
 ** Find a number into a string.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 int kj_find_in_str(char const *str, char c, char d)
 {
     for (int i = 0; str[i] != '\0'; ++i)

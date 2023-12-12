@@ -5,7 +5,7 @@
 ** Get a from a string.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 static int my_getnbr_3rd(int *signe, long long *n)
 {
     if ((*n * *signe) > 2147483647 ||

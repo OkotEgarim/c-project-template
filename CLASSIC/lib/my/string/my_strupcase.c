@@ -5,7 +5,7 @@
 ** Put a string into uppercase.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 char *my_strupcase(char *str)
 {
     for (int i = 0; str[i] != '\0'; ++i)

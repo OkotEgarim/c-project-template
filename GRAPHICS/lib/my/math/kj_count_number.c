@@ -5,7 +5,7 @@
 ** Return the size of an integer.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 int kj_count_number(unsigned long long n)
 {
     int c = 1;

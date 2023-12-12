@@ -5,7 +5,7 @@
 ** Return the color using bit shifting.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 int get_color(unsigned char red, unsigned char green, unsigned char blue)
 {
     int color_value = 0;

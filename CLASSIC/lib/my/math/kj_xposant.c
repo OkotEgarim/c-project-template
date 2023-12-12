@@ -5,7 +5,7 @@
 ** Put a number into the given power.
 */
 
-#include"../../../include/my.h"
+#include "../../../include/my.h"
 unsigned long long kj_xposant(int nb, int p)
 {
     unsigned long long result = nb;
