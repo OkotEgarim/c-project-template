@@ -2,3 +2,4 @@
 
 make
 clear
+./projet

@@ -12,53 +12,58 @@
     #include <stdlib.h>
     #include <unistd.h>
     #include <stdarg.h>
-    #include <stdint.h>
 
 typedef struct linked_list {
     void *data;
     struct linked_list *next;
 } linked_list_t;
 
-void my_putchar(char);
-void my_putnbr(long long);
-void my_putstr(char const *);
-int my_strlen(char const *);
-char *my_substr(char const *, int, int);
-int my_getnbr(char const *);
-void my_sort_int_array(int *, int);
-int my_compute_square_root(int);
-int my_is_prime(int);
-char *my_strcpy(char *, char const *);
-char *my_strncpy(char *, char const *, int);
-char *my_revstr(char *);
-char *my_strstr(char *, char const *);
-int my_strcmp(char const *, char const *);
-int my_strncmp(char const *, char const *, int n);
-char *my_strupcase(char *);
-char *my_strlowcase(char *);
-char *my_strcat(char *, char const *);
-int my_show_str_array(char **);
-int my_show_int_array(int *);
-char **my_str_to_word_array(char const *);
-char *my_strdup(char const *);
-void my_concat_list(linked_list_t **, linked_list_t **);
-linked_list_t *my_params_to_list(int, char **);
-void my_rev_list(linked_list_t **);
-int get_color(unsigned char, unsigned char, unsigned char);
-int kj_count_number(unsigned long long int);
-char *kj_convert_base(unsigned long long, int);
-void kj_put_in_chain(linked_list_t **, void *);
-long long kj_reverse_base(char *, int);
-void kj_free_list(linked_list_t **);
-char *kj_getfloat(double, int);
-int kj_find_in_str(char const *, char, char);
-char *kj_int_to_str(long long);
-unsigned long long int kj_xposant(int, int);
-char *kj_atomize_char(char *, char, int, int);
-int my_list_size(linked_list_t **);
-int kj_stracmp(char const *, char const *);
-void my_printf(const char *, ...);
-void my_display_list(linked_list_t *, void (*)());
-void my_delete_in_list(linked_list_t **, void const *, int (*)());
-linked_list_t *kj_list_sort(linked_list_t *);
+// others
+void a_sort_int(int *array, int size);
+int n_size(unsigned long long n);
+char *s_upper(char *str);
+char *s_lower(char *str);
+char *s_pattern(char *str, char const *pattern);
+char *s_copy(char *dest, char const *src);
+char *s_ncopy(char *dest, char const *src, int max);
+int s_compare(char const *s1, char const *s2);
+int s_acompare(char const *s1, char const *s2);
+int s_ncompare(char const *s1, char const *s2, int size);
+int s_size(char const *str);
+char *s_reverse(char *str);
+int s_search(char const *str, char min, char max);
+int n_convert_s(char const *str);
+unsigned long long n_power(int nb, int power);
+int n_prime(int nb);
+int n_isprime(int nb);
+long long n_revbase(char *nb, int base);
+
+// stdlib.h
+void l_free(linked_list_t **list);
+linked_list_t *l_sort(linked_list_t *list, int (*cmp_func)());
+void l_add(linked_list_t **list, void *arg);
+void l_merge(linked_list_t **list_1, linked_list_t **list_2);
+void l_remove(linked_list_t **list, void const *ref, int (*cmp_func)());
+void l_reverse(linked_list_t **list);
+linked_list_t *l_convert_a(int ac, char **av);
+void l_display(linked_list_t *list, void (*disp_func)());
+int l_size(linked_list_t **list);
+char *s_extract(char const *str, int min, int max);
+char *s_dup(char const *src);
+char *s_merge(char *dest, char const *src);
+char *s_convert_n(long long nb);
+char *s_remove(char *str, char c);
+char *n_base(unsigned long long nb, int base);
+char *s_convert_f(double nb, int virg);
+
+// unistd.h
+void a_display_n(int *array);
+void a_display_s(char **array);
+void my_putstr(char const *str, int port);
+void my_putchar(char c, int port);
+void my_putnbr(long long nb, int port);
+
+// stdarg.h
+void my_printf(const char *str, ...);
+
 #endif
