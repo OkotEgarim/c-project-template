@@ -37,6 +37,8 @@ unsigned long long n_power(int nb, int power);
 int n_prime(int nb);
 int n_isprime(int nb);
 long long n_revbase(char *nb, int base);
+int s_count(char *str, char c);
+int a_size(char **array);
 
 // stdlib.h
 void l_free(linked_list_t **list);
@@ -55,6 +57,9 @@ char *s_convert_n(long long nb);
 char *s_remove(char *str, char c);
 char *n_base(unsigned long long nb, int base);
 char *s_convert_f(double nb, int virg);
+void a_free(char **array);
+char **a_convert_s(char *str, char sep);
+char **a_copy(char **array);
 
 // unistd.h
 void a_display_n(int *array);

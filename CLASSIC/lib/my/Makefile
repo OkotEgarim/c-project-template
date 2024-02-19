@@ -33,6 +33,8 @@ SRC	=	$(OTHERS)a_sort_int.c	\
 		$(OTHERS)s_reverse.c	\
 		$(OTHERS)s_search.c	\
 		$(OTHERS)s_size.c	\
+		$(OTHERS)s_count.c	\
+		$(OTHERS)a_size.c	\
 		$(STDLIB)l_add.c	\
 		$(STDLIB)l_convert_a.c	\
 		$(STDLIB)l_display.c	\
@@ -49,6 +51,9 @@ SRC	=	$(OTHERS)a_sort_int.c	\
 		$(STDLIB)s_extract.c	\
 		$(STDLIB)s_merge.c	\
 		$(STDLIB)s_remove.c	\
+		$(STDLIB)a_free.c	\
+		$(STDLIB)a_convert_s.c	\
+		$(STDLIB)a_copy.c	\
 		$(UNISTD)a_display_n.c	\
 		$(UNISTD)a_display_s.c	\
 		$(UNISTD)my_putchar.c	\
@@ -56,52 +61,60 @@ SRC	=	$(OTHERS)a_sort_int.c	\
 		$(UNISTD)my_putnbr.c	\
 		$(STDARG)my_printf.c	\
 
-OBJ	=	a_sort_int.o	\
-		n_convert_s.o	\
-		n_prime.o	\
-		n_isprime.o	\
-		n_power.o	\
-		n_revbase.o	\
-		n_size.o	\
-		s_acompare.o	\
-		s_compare.o	\
-		s_copy.o	\
-		s_lower.o	\
-		s_upper.o	\
-		s_ncompare.o	\
-		s_ncopy.o	\
-		s_pattern.o	\
-		s_reverse.o	\
-		s_search.o	\
-		s_size.o	\
-		l_add.o	\
-		l_convert_a.o	\
-		l_display.o	\
-		l_free.o	\
-		l_merge.o	\
-		l_size.o	\
-		l_remove.o	\
-		l_reverse.o	\
-		l_sort.o	\
-		n_base.o	\
-		s_convert_f.o	\
-		s_convert_n.o	\
-		s_dup.o	\
-		s_extract.o	\
-		s_merge.o	\
-		s_remove.o	\
-		a_display_n.o	\
-		a_display_s.o	\
-		my_putchar.o	\
-		my_putstr.o	\
-		my_putnbr.o	\
-		my_printf.o	\
+OBJ_OTHERS	=	a_sort_int.o	\
+				n_convert_s.o	\
+				n_prime.o	\
+				n_isprime.o	\
+				n_power.o	\
+				n_revbase.o	\
+				n_size.o	\
+				s_acompare.o	\
+				s_compare.o	\
+				s_copy.o	\
+				s_lower.o	\
+				s_upper.o	\
+				s_ncompare.o	\
+				s_ncopy.o	\
+				s_pattern.o	\
+				s_reverse.o	\
+				s_search.o	\
+				s_size.o	\
+				s_count.o	\
+				a_size.o	\
+
+OBJ_STDLIB	=	l_add.o	\
+				l_convert_a.o	\
+				l_display.o	\
+				l_free.o	\
+				l_merge.o	\
+				l_size.o	\
+				l_remove.o	\
+				l_reverse.o	\
+				l_sort.o	\
+				n_base.o	\
+				s_convert_f.o	\
+				s_convert_n.o	\
+				s_dup.o	\
+				s_extract.o	\
+				s_merge.o	\
+				s_remove.o	\
+				a_free.o	\
+				a_convert_s.o	\
+				a_copy.o	\
+
+OBJ_UNISTD	=	a_display_n.o	\
+				a_display_s.o	\
+				my_putchar.o	\
+				my_putstr.o	\
+				my_putnbr.o	\
+
+OBJ_STDARG	=	my_printf.o	\
 
 NAME	=	libmy.a
 
 all:
 	gcc -c $(SRC) -include $(INCLUDES)
-	ar rc $(NAME) $(OBJ)
+	ar rc $(NAME) $(OBJ_OTHERS) $(OBJ_STDARG) $(OBJ_STDLIB) $(OBJ_UNISTD)
 	find -name "*.o" -delete -o -name "*.gch" -delete
 	cp $(NAME) ../..
 
