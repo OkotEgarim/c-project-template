@@ -14,6 +14,8 @@ static int malloc_tab(char ***mem_tab, char *str, char sep)
     if (nwords == 0)
         return -1;
     *mem_tab = malloc(sizeof(char *) * (nwords + 1));
+    if (*mem_tab == NULL)
+        return -1;
     return 0;
 }
 

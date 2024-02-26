@@ -12,6 +12,8 @@ char *s_extract(char const *str, int y, int x)
     char *result = malloc((sizeof(char) * (x - y)) + 1);
     int i = 0;
 
+    if (result == NULL)
+        return NULL;
     for (; y < x && str[y] != '\0'; ++i) {
         result[i] = str[y];
         ++y;

@@ -12,6 +12,8 @@ char *s_merge(char *dest, char const *src)
     s_size(src))) + 1);
     int j = 0;
 
+    if (result == NULL)
+        return NULL;
     for (int i = 0; dest[i] != '\0'; ++i){
         result[j] = dest[i];
         ++j;

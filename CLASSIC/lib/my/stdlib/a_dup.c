@@ -9,9 +9,12 @@
 
 char **a_dup(char **array)
 {
-    char **copy = malloc(sizeof(char *) * (a_size(array) + 1));
+    char **copy;
     int i = 0;
 
+    copy = malloc(sizeof(char *) * (a_size(array) + 1));
+    if (copy == NULL)
+        return NULL;
     for (; array[i] != NULL; ++i)
         copy[i] = s_dup(array[i]);
     copy[i] = NULL;
