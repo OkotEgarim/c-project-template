@@ -1,4 +1,4 @@
 #!/bin/bash
 
-make
+make re
 valgrind $1 ./projet

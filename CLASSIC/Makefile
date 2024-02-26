@@ -13,9 +13,9 @@ NAME	=	projet
 
 .PHONY: all clean fclean re
 
-all: $(NAME)
+all:	$(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):	$(OBJ)
 	make -C ./lib/my
 	gcc $(SRC) -o $(NAME) -L. -lmy
 

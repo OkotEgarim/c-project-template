@@ -114,18 +114,18 @@ NAME	=	libmy.a
 
 .PHONY: all clean fclean re
 
-all: $(NAME)
+all:	$(NAME)
 
-$(NAME): $(OBJ)
+$(NAME):	$(SRC)
 	gcc -c $(SRC) -include $(INCLUDES)
 	ar rc $(NAME) $(OBJ_OTHERS) $(OBJ_STDARG) $(OBJ_STDLIB) $(OBJ_UNISTD)
 	find -name "*.o" -delete -o -name "*.gch" -delete
-	cp $(NAME) ../..
+	mv $(NAME) ../..
 
 clean:
 	rm -f $(OBJ)
 
 fclean:	clean
-	rm -f $(NAME)
+	rm -f ../../$(NAME)
 
 re:	fclean all
