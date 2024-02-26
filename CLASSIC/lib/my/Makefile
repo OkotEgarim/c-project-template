@@ -112,7 +112,11 @@ OBJ_STDARG	=	my_printf.o	\
 
 NAME	=	libmy.a
 
-all:
+.PHONY: all clean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
 	gcc -c $(SRC) -include $(INCLUDES)
 	ar rc $(NAME) $(OBJ_OTHERS) $(OBJ_STDARG) $(OBJ_STDLIB) $(OBJ_UNISTD)
 	find -name "*.o" -delete -o -name "*.gch" -delete
