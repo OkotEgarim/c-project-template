@@ -7,7 +7,7 @@
 
 #include "../../../include/my.h"
 
-char **a_copy(char **array)
+char **a_dup(char **array)
 {
     char **copy = malloc(sizeof(char *) * (a_size(array) + 1));
     int i = 0;

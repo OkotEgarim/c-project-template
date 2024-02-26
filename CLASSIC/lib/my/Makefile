@@ -53,7 +53,7 @@ SRC	=	$(OTHERS)a_sort_int.c	\
 		$(STDLIB)s_remove.c	\
 		$(STDLIB)a_free.c	\
 		$(STDLIB)a_convert_s.c	\
-		$(STDLIB)a_copy.c	\
+		$(STDLIB)a_dup.c	\
 		$(UNISTD)a_display_n.c	\
 		$(UNISTD)a_display_s.c	\
 		$(UNISTD)my_putchar.c	\
@@ -100,7 +100,7 @@ OBJ_STDLIB	=	l_add.o	\
 				s_remove.o	\
 				a_free.o	\
 				a_convert_s.o	\
-				a_copy.o	\
+				a_dup.o	\
 
 OBJ_UNISTD	=	a_display_n.o	\
 				a_display_s.o	\

@@ -7,14 +7,20 @@
 
 #include "../../../include/my.h"
 
+static void skip_word(char *str, char c, int *i)
+{
+    for (; str[*i] != c && str[*i + 1] != '\0'; ++(*i));
+}
+
 int s_count(char *str, char c)
 {
     int cpt = 0;
-    int i = 0;
 
-    for (; str[i] == c; ++i);
-    for (; str[i] != '\0'; ++i)
-        if (str[i] == c && str[i + 1] != c && str[i + 1] != '\0')
+    for (int i = 0; str[i] != '\0'; ++i){
+        if (str[i] != c){
             ++cpt;
-    return (cpt);
+            skip_word(str, c, &i);
+        }
+    }
+    return cpt;
 }

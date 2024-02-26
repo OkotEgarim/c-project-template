@@ -59,7 +59,7 @@ char *n_base(unsigned long long nb, int base);
 char *s_convert_f(double nb, int virg);
 void a_free(char **array);
 char **a_convert_s(char *str, char sep);
-char **a_copy(char **array);
+char **a_dup(char **array);
 
 // unistd.h
 void a_display_n(int *array);
