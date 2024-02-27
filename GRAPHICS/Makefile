@@ -13,7 +13,11 @@ OBJ	=	$(SRC:.c .o)
 
 NAME	=	projet
 
-all:
+.PHONY: all clean fclean re
+
+all:	$(NAME)
+
+$(NAME):	$(OBJ)
 	make -C ./lib/my
 	gcc $(SRC) -o $(NAME) -L. -lmy \
 	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
