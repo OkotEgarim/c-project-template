@@ -6,10 +6,12 @@
 */
 
 #include "../../../include/my.h"
-void l_display(linked_list_t *list, void (*disp_fct)())
+void l_display(linked_list_t *list)
 {
     linked_list_t *tmp = list;
 
-    for (; tmp != NULL; tmp = tmp->next)
-        disp_fct(tmp->data);
+    for (; tmp != NULL; tmp = tmp->next){
+        my_putstr(tmp->data, 1);
+        my_putchar('\n', 1);
+    }
 }

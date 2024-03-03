@@ -6,7 +6,7 @@
 */
 
 #include "../../../include/my.h"
-int s_ncompare(char const *s1, char const *s2, int n)
+int my_strncmp(char const *s1, char const *s2, int n)
 {
     int t1 = 0;
     int t2 = 0;

@@ -7,7 +7,7 @@
 
 SRC	=	main.c	\
 
-OBJ	=	$(SRC:.c .o)
+OBJ	=	$(SRC:.c=.o)
 
 NAME	=	projet
 

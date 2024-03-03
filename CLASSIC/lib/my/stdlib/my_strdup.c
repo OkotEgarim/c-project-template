@@ -6,9 +6,9 @@
 */
 
 #include "../../../include/my.h"
-char *s_dup(char const *src)
+char *my_strdup(char const *src)
 {
-    int src_len = s_size(src);
+    int src_len = my_strlen(src);
     int i = 0;
     char *str;
 

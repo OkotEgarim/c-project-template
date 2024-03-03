@@ -16,7 +16,7 @@ char **a_dup(char **array)
     if (copy == NULL)
         return NULL;
     for (; array[i] != NULL; ++i)
-        copy[i] = s_dup(array[i]);
+        copy[i] = my_strdup(array[i]);
     copy[i] = NULL;
     return copy;
 }

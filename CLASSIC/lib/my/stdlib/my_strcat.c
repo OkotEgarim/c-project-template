@@ -6,10 +6,10 @@
 */
 
 #include "../../../include/my.h"
-char *s_merge(char *dest, char const *src)
+char *my_strcat(char *dest, char const *src)
 {
-    char *result = malloc((sizeof(char) * (s_size(dest) +
-    s_size(src))) + 1);
+    char *result = malloc((sizeof(char) * (my_strlen(dest) +
+    my_strlen(src))) + 1);
     int j = 0;
 
     if (result == NULL)

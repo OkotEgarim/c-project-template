@@ -8,7 +8,7 @@
 #include "../../../include/my.h"
 char *s_reverse(char *str)
 {
-    int pos_y = s_size(str) - 1;
+    int pos_y = my_strlen(str) - 1;
     char tmp;
 
     for (int pos_x = 0; pos_x < pos_y; ++pos_x){

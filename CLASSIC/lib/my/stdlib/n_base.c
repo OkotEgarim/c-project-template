@@ -10,12 +10,12 @@ const char symboles[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 
 char *n_base(unsigned long long nb, int base)
 {
-    char *result = s_dup("");
+    char *result = my_strdup("");
     char carac[] = "#";
 
     while (nb > 0){
         carac[0] = symboles[nb % base];
-        result = s_merge(result, carac);
+        result = my_strcat(result, carac);
         nb /= base;
     }
     return (result);

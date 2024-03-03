@@ -7,7 +7,7 @@
 */
 
 #include "../../../include/my.h"
-char *s_extract(char const *str, int y, int x)
+char *my_substr(char const *str, int y, int x)
 {
     char *result = malloc((sizeof(char) * (x - y)) + 1);
     int i = 0;

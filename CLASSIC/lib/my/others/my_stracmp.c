@@ -14,7 +14,7 @@ static char verif_char(char c)
         return (c);
 }
 
-int s_acompare(char const *s1, char const *s2)
+int my_stracmp(char const *s1, char const *s2)
 {
     int t1 = 0;
     int t2 = 0;

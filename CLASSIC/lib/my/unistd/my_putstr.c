@@ -8,5 +8,5 @@
 #include "../../../include/my.h"
 void my_putstr(char const *str, int port)
 {
-    write(port, str, s_size(str));
+    write(port, str, my_strlen(str));
 }

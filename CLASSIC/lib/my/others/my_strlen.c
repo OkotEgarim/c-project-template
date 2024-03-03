@@ -6,7 +6,7 @@
 */
 
 #include "../../../include/my.h"
-int s_size(char const *str)
+int my_strlen(char const *str)
 {
     int i = 0;
 

@@ -15,7 +15,7 @@ char *s_remove(char *str, char c)
     for (int i = 0; str[i] != '\0'; ++i){
         carac[0] = str[i];
         if (str[i] != c)
-            result = s_merge(result, carac);
+            result = my_strcat(result, carac);
     }
     return (result);
 }

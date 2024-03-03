@@ -40,8 +40,8 @@ static void move_pointer(char *str, char sep, char **tab, int (*pos)[3])
 {
     for (; str[(*pos)[1]] == sep || (str[(*pos)[1]] == '\0'
     && (str[(*pos)[1] - 1] == sep)); --(*pos)[1]);
-    if (str[s_size(str) - 1] != sep){
-        tab[(*pos)[2]] = s_extract(str, (*pos)[0], (*pos)[1] + 1);
+    if (str[my_strlen(str) - 1] != sep){
+        tab[(*pos)[2]] = my_substr(str, (*pos)[0], (*pos)[1] + 1);
         (*pos)[2]++;
     }
     tab[(*pos)[2]] = NULL;
@@ -60,7 +60,7 @@ char **a_convert_s(char *str, char sep)
         if (is_sep_before(str, sep, pos) == 1)
             pos[0] = pos[1];
         if (is_sep_after(str, sep, pos) == 1){
-            tab[pos[2]] = s_extract(str, pos[0], pos[1] + 1);
+            tab[pos[2]] = my_substr(str, pos[0], pos[1] + 1);
             pos[2]++;
             pos[0] = pos[1] + 1;
         }

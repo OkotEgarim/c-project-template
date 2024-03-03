@@ -11,7 +11,7 @@ const char symboles[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 long long n_revbase(char *nb, int base)
 {
     int result = 0;
-    int size = s_size(nb) - 1;
+    int size = my_strlen(nb) - 1;
     int j = 0;
 
     for (int i = 0; nb[i] != '\0'; ++i){
