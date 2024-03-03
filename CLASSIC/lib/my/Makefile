@@ -64,7 +64,6 @@ all:	$(NAME)
 $(NAME):	$(OBJ)
 	gcc -c $(SRC) -include $(INCLUDES)
 	ar rc $(NAME) $(OBJ)
-	find -name "*.o" -delete -o -name "*.gch" -delete
 	mv $(NAME) ../..
 
 clean:
