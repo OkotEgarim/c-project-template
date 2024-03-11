@@ -46,12 +46,14 @@ SRC	=	others/a_sort_int.c	\
 		stdlib/a_free.c	\
 		stdlib/a_convert_s.c	\
 		stdlib/a_dup.c	\
+		stdlib/my_getline.c	\
 		unistd/a_display_n.c	\
 		unistd/a_display_s.c	\
 		unistd/my_putchar.c	\
 		unistd/my_putstr.c	\
 		unistd/my_putnbr.c	\
-		stdarg/my_printf.c
+		stdarg/my_printf.c	\
+		fcntl/my_readfile.c
 
 OBJ	=	$(SRC:.c=.o)
 

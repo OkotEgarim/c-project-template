@@ -18,5 +18,5 @@ char *n_base(unsigned long long nb, int base)
         result = my_strcat(result, carac);
         nb /= base;
     }
-    return (result);
+    return s_reverse(result);
 }

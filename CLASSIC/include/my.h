@@ -12,6 +12,7 @@
     #include <stdlib.h>
     #include <unistd.h>
     #include <stdarg.h>
+    #include <fcntl.h>
 
 typedef struct linked_list {
     void *data;
@@ -60,6 +61,7 @@ char *s_convert_f(double nb, int virg);
 void a_free(char **array);
 char **a_convert_s(char *str, char sep);
 char **a_dup(char **array);
+char *my_getline(char *str, int *i);
 
 // unistd.h
 void a_display_n(int *array);
@@ -70,5 +72,8 @@ void my_putnbr(long long nb, int port);
 
 // stdarg.h
 void my_printf(const char *str, ...);
+
+// fcntl.h
+char *my_readfile(char *pathname);
 
 #endif

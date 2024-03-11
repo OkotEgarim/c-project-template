@@ -9,7 +9,7 @@ SRC	=	main.c	\
 		event.c	\
 		window.c	\
 
-OBJ	=	$(SRC:.c .o)
+OBJ	=	$(SRC:.c=.o)
 
 NAME	=	projet
 

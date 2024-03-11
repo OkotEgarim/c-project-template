@@ -6,8 +6,9 @@
 */
 
 #include "include/my.h"
-int main(void)
+
+int main(int ac, char **av)
 {
     my_putstr("All works fine.\n", 1);
-    return (0);
+    return 0;
 }
