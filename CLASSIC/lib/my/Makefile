@@ -20,6 +20,7 @@ SRC	=	others/a_sort_int.c	\
 		others/s_lower.c	\
 		others/s_upper.c	\
 		others/my_strncmp.c	\
+        others/my_strscmp.c	\
 		others/s_ncopy.c	\
 		others/my_strstr.c	\
 		others/s_reverse.c	\
