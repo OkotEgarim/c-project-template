@@ -5,7 +5,7 @@
 ** Project main file.
 */
 
-#include "include/my.h"
+#include "../include/project.h"
 
 int main(int ac, char **av)
 {

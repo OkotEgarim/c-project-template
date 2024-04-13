@@ -7,6 +7,7 @@
 
 #ifndef MY
     #define MY
+    #define BASE_36 "0123456789abcdefghijklmnopqrstuvwxyz"
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -30,6 +31,7 @@ char *s_ncopy(char *dest, char const *src, int max);
 int my_strcmp(char const *s1, char const *s2);
 int my_stracmp(char const *s1, char const *s2);
 int my_strncmp(char const *s1, char const *s2, int size);
+int my_strscmp(char const *s1, char const *s2, int i, int n);
 int my_strlen(char const *str);
 char *s_reverse(char *str);
 int s_search(char const *str, char min, char max);
@@ -54,6 +56,7 @@ int l_size(linked_list_t **list);
 char *my_substr(char const *str, int min, int max);
 char *my_strdup(char const *src);
 char *my_strcat(char *dest, char const *src);
+char *my_strcat_sep(char *dest, char const *src, char sep);
 char *s_convert_n(long long nb);
 char *s_remove(char *str, char c);
 char *n_base(unsigned long long nb, int base);
@@ -61,7 +64,7 @@ char *s_convert_f(double nb, int virg);
 void a_free(char **array);
 char **a_convert_s(char *str, char sep);
 char **a_dup(char **array);
-char *my_getline(char *str, int *i);
+char *my_getline(char *str, int *i, char sep);
 
 // unistd.h
 void a_display_n(int *array);

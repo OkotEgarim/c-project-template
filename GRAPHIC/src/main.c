@@ -5,8 +5,8 @@
 ** Project main file.
 */
 
-#include "include/my.h"
-#include "include/csfml.h"
+#include "../include/csfml.h"
+
 int menu(void)
 {
     sfRenderWindow *window = create_window();

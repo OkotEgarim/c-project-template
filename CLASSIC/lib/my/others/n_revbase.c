@@ -6,7 +6,6 @@
 */
 
 #include "../../../include/my.h"
-const char symboles[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 
 long long n_revbase(char *nb, int base)
 {
@@ -15,7 +14,7 @@ long long n_revbase(char *nb, int base)
     int j = 0;
 
     for (int i = 0; nb[i] != '\0'; ++i){
-        for (j = 0; symboles[j] != nb[i]; ++j);
+        for (j = 0; BASE_36[j] != nb[i]; ++j);
         result += (j * n_power(base, size - i));
     }
     return (result);

@@ -5,8 +5,8 @@
 ** Do window things.
 */
 
-#include "include/my.h"
-#include "include/csfml.h"
+#include "../include/csfml.h"
+
 sfRenderWindow *create_window(void)
 {
     sfVideoMode mode = {1920, 1080, 32};

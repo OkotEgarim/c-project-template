@@ -6,7 +6,6 @@
 */
 
 #include "../../../include/my.h"
-const char symboles[] = "0123456789abcdefghijklmnopqrstuvwxyz";
 
 char *n_base(unsigned long long nb, int base)
 {
@@ -14,7 +13,7 @@ char *n_base(unsigned long long nb, int base)
     char carac[] = "#";
 
     while (nb > 0){
-        carac[0] = symboles[nb % base];
+        carac[0] = BASE_36[nb % base];
         result = my_strcat(result, carac);
         nb /= base;
     }

@@ -6,7 +6,9 @@
 ##
 
 SRC	=	src/main.c	\
-		lib/my/others/a_sort_int.c	\
+		src/event.c	\
+		src/window.c	\
+        lib/my/others/a_sort_int.c	\
 		lib/my/others/n_convert_s.c	\
 		lib/my/others/n_prime.c	\
 		lib/my/others/n_isprime.c	\
@@ -63,7 +65,8 @@ NAME	=	project
 all:	$(NAME)
 
 $(NAME):	$(OBJ)
-	gcc $(SRC) -o $(NAME)
+	gcc $(SRC) -o $(NAME)	\
+	-lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 clean:
 	rm -f $(OBJ)
