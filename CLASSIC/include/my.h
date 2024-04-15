@@ -72,6 +72,7 @@ void a_display_s(char **array);
 void my_putstr(char const *str, int port);
 void my_putchar(char c, int port);
 void my_putnbr(long long nb, int port);
+char *my_strtok(char *str, char *clean_list);
 
 // stdarg.h
 void my_printf(const char *str, ...);
